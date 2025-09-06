@@ -1,7 +1,7 @@
 :root {
   /* Material Lighter */
   --base00: #FAFAFA;
-  --base01: #E7EAEC;
+  --base01: #FAFAFA; /* Changed from #E7EAEC to match main background for header/footer */
   --base02: #CCEAE7;
   --base03: #CCD7DA;
   --base04: #8796B0;
