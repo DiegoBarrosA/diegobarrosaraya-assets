@@ -1,10 +1,8 @@
-/* Shared footer styles for Diego Barros sites */
+/* Footer layout only. Colors are inherited from CSS variables in shared-theme.css */
 .site-footer {
   margin-top: 48px;
   padding: 24px 0 12px 0;
-  background: #212121;
   text-align: center;
-  color: #eeffff;
 }
 .site-footer .footer-links {
   display: flex;
@@ -20,24 +18,8 @@
   gap: 6px;
 }
 .site-footer a {
-  color: #89ddff;
   text-decoration: none;
 }
 .site-footer a:hover {
   text-decoration: underline;
-}
-.site-footer .fa-envelope,
-.site-footer .fa-linkedin,
-.site-footer .fa-github,
-.site-footer .fa-blog,
-.site-footer .fa-book {
-  color: #82aaff;
-}
-.site-footer .fa-rss,
-.site-footer .footer-links span span {
-  color: #c3e88d;
-}
-.site-footer .footer-links span span {
-  color: #c3e88d;
-  margin: 0 4px;
 }

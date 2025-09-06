@@ -1,0 +1,34 @@
+name: Build and Deploy Shared CSS
+
+on:
+  push:
+    paths:
+      - 'shared-theme.scss'
+      - '.github/workflows/build-css.yml'
+  workflow_dispatch:
+
+jobs:
+  build-css:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Sass
+        run: npm install -g sass
+
+      - name: Compile SCSS to CSS
+        run: sass shared-theme.scss shared-theme.css
+
+      - name: Commit and push CSS
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add shared-theme.css
+          git commit -m 'Auto-compile shared-theme.css from SCSS [skip ci]' || echo "No changes to commit"
+          git push
