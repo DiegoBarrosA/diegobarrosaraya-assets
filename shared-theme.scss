@@ -8,7 +8,7 @@
   --base02: #CCEAE7;
   --base03: #CCD7DA;
   --base04: #8796B0;
-  --base05: #80CBC4;
+  --base05: #212121; /* Changed to black equivalent for better contrast in light mode */
   --base06: #80CBC4;
   --base07: #FFFFFF;
   --base08: #FF5370;
@@ -25,7 +25,7 @@
 [data-theme="dark"] {
   /* Material Darker */
   --base00: #212121;
-  --base01: #303030;
+  --base01: #212121; /* Changed from #303030 to match base00 for footer/header */
   --base02: #353535;
   --base03: #4A4A4A;
   --base04: #B2CCD6;
