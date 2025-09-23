@@ -1,27 +1,62 @@
-# Shared Assets for Diego Barros Sites
+# Diego Barros Araya - Shared Assets
 
-This repository hosts shared static assets (such as CSS, images, or fonts) for the following sites:
-- [Main site](https://diegobarrosaraya.com/)
-- [Blog](https://blog.diegobarrosaraya.com/)
-- [Docs](https://docs.diegobarrosaraya.com/)
+This repository contains shared assets for all sites in the diegobarrosaraya.com ecosystem:
+- Main portfolio: diegobarrosaraya.com
+- Blog: blog.diegobarrosaraya.com  
+- Documentation: docs.diegobarrosaraya.com
 
-## Usage
+## Theme System
 
-To use the shared CSS theme in your site, add the following to your HTML `<head>`:
+### Features
+- **Automatic System Detection**: Detects user's OS dark/light mode preference on first visit
+- **Cross-Site Persistence**: Theme choice persists across all subdomains using cookies
+- **Manual Toggle**: Users can manually switch between light and dark themes
+- **Fallback Support**: Graceful degradation if JavaScript fails to load
+- **Mermaid Integration**: Dynamic theme switching for Mermaid diagrams
 
+### Files
+- `shared-theme.scss` - Source SCSS with Material Design color palettes
+- `shared-theme.css` - Compiled CSS with CSS variables and media queries
+- `shared-theme.js` - Theme management JavaScript with cross-site persistence
+- `shared-footer.css` - Shared footer styling
+
+### Implementation
+
+Each site includes:
 ```html
-<link rel="stylesheet" href="https://diegobarrosaraya-assets.github.io/shared-theme.css">
+<link rel="stylesheet" href="https://diegobarrosa.github.io/diegobarrosaraya-assets/shared-theme.css">
+<link rel="stylesheet" href="https://diegobarrosa.github.io/diegobarrosaraya-assets/shared-footer.css">
+<script src="https://diegobarrosa.github.io/diegobarrosaraya-assets/shared-theme.js"></script>
 ```
 
-Or, if you place it in an `assets/` folder:
+### Color Palettes
 
-```html
-<link rel="stylesheet" href="https://diegobarrosaraya-assets.github.io/assets/shared-theme.css">
-```
+**Light Theme (Material Lighter)**
+- Background: #FAFAFA
+- Text: #212121
+- Primary: #6182B8
+- Secondary: #91B859
+- Accent: #39ADB5
 
-## Updating Styles
+**Dark Theme (Material Darker)** 
+- Background: #212121
+- Text: #EEFFFF
+- Primary: #82AAFF
+- Secondary: #C3E88D
+- Accent: #89DDFF
 
-To update the shared theme, edit `shared-theme.css` in this repository. All sites referencing this file will automatically use the latest version after deployment.
+### Browser Support
+- Modern browsers with CSS custom properties support
+- Graceful fallback for older browsers
+- JavaScript optional but recommended for full functionality
 
----
-For questions or contributions, contact [Diego Barros](mailto:contact@diegobarrosaraya.com).
+## Development
+
+To modify themes:
+1. Edit `shared-theme.scss`
+2. Compile to CSS (automated via GitHub Actions)
+3. Test across all three sites
+
+## License
+
+Licensed under the same terms as the individual site repositories.
