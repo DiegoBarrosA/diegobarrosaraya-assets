@@ -1,11 +1,13 @@
 :root {
   /* Material Lighter */
   --base00: #FAFAFA;
-  --base01: #FAFAFA; /* Changed from #E7EAEC to match main background for header/footer */
+  --base01: #FAFAFA;
+  /* Changed from #E7EAEC to match main background for header/footer */
   --base02: #CCEAE7;
   --base03: #CCD7DA;
   --base04: #8796B0;
-  --base05: #212121; /* Changed to black equivalent for better contrast in light mode */
+  --base05: #212121;
+  /* Changed to black equivalent for better contrast in light mode */
   --base06: #80CBC4;
   --base07: #FFFFFF;
   --base08: #FF5370;
@@ -17,6 +19,8 @@
   --base0E: #7C4DFF;
   --base0F: #E53935;
   color-scheme: light;
+  font-size: 1.5em;
+
 }
 
 /* Auto-detect system dark mode preference when no manual theme is set */
@@ -40,12 +44,16 @@
     --base0E: #C792EA;
     --base0F: #FF5370;
     color-scheme: dark;
+    font-size: 1.5em;
+
   }
 }
+
 [data-theme=dark] {
   /* Material Darker */
   --base00: #212121;
-  --base01: #212121; /* Changed from #303030 to match base00 for footer/header */
+  --base01: #212121;
+  /* Changed from #303030 to match base00 for footer/header */
   --base02: #353535;
   --base03: #4A4A4A;
   --base04: #B2CCD6;
@@ -61,6 +69,8 @@
   --base0E: #C792EA;
   --base0F: #FF5370;
   color-scheme: dark;
+  font-size: 1.5em;
+
 }
 
 body {
@@ -90,10 +100,7 @@ a {
 a:hover {
   color: var(--base0A);
 }
-p {
-      font-size: 1.5em;
 
-}
 
 .main-nav {
   background: var(--base01);
@@ -132,7 +139,8 @@ p {
   color: var(--base05);
 }
 
-.footer-links i, .main-nav i {
+.footer-links i,
+.main-nav i {
   color: var(--base0D);
 }
 
